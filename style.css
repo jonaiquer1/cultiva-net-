@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+body {
+    background-color: #fff;
+    color: #222;
+    transition: all 0.5s ease;
+}
+.container {
+    display: grid;
+    height: auto;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #08542a;
+    color: #fff;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header .logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: rgb(214, 230, 219);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
+}
+.header .menu {
+    display: flex;
+}
+#el-unico{
+    font-size:70px;
+}
+.header .menu a {
+    color: #f5f6f6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    height: 60px;
+    padding: 20px;
+}
+
+.mostrar-menu i,
+.esconder-menu i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.mostrar-menu,
+.esconder-menu {
+    display: none;
+}
+
+.mostrar-menu {
+    order: 1;
+}
+
+
+
+#check {
+    display: none;
+}
+
+.slider {
+    width: auto;
+    height: 480px;
+    overflow: hidden;
+}
+
+.slider .slides {
+    width: 500%;
+    height: 480px;
+    display: flex;
+    box-shadow: 0px 10px 20px -10px rgba(27, 164, 27, 0.3);
+}
+
+.slider .slides .slide {
+    width: 20%;
+    transition: all 1.5s ease-in-out;
+}
+
+.slider .slides .slide img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+.slider .navigation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -30px;
+    gap: 40px;
+}
+
+.slider .navigation .nav-btn {
+    background: rgb(137, 170, 75);
+    opacity: 0.2;
+    padding: 5px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease ;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 45px;
+    gap: 30px;
+    background-color: rgb(255, 255, 255);
+
+
+}
+.main .titulo{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:rgb(6, 115, 13)
+
+}
+
+.agricultor{
+    color: #080808; 
+}
+.main .album {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    width: 100%;
+    gap: 40px;    
+    padding: 10px;
+}
+
+.main .album .tarjeta {
+    border-radius: 20px;
+    width: 400px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(4, 150, 14, 0.2);
+    display: grid;
+    align-items: center;   
+}
+
+.producto{
+    font-size: 20px;
+    color: #080808;
+    font-weight:800;
+
+
+}
+
+
+.tarjeta{
+    background-color:white;
+
+}
+.main .album .tarjeta .img-tarjeta {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;  
+    border-radius: 25px;  
+}
+
+
+
+
+.main .album .tarjeta .info-tarjeta {
+    display: grid;
+    gap: 40px;
+    padding: 30px;
+}
+
+.main .album .tarjeta .info-tarjeta h3 {
+    font-size: 16px;
+}
+.btn-open{
+
+    border: 1px solid #79b42b;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #050505;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    transition: all 0.2s ease;
+
+
+
+}
+.caja.contenedor{
+    width: 100%;
+    height: 100%;
+    padding: 50%,50%;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+.link {
+    border: 1px solid #79b42b;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #050505;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+.link i {
+    color: #222;
+}
+
+
+/* SECTION: CONTACT */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 65px 250px;
+    border-top: 1px solid #bbbbbb;
+    background: #fff;
+}
+.subtitulo{
+    font-size: 100px;
+    font-weight: 800;
+    color:#161717
+    
+}
+.subtitulo:hover{
+    color:green
+
+}
+h4:hover{
+    color:red
+
+}
+
+.contact .alinear {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .centrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.contact .centrar h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+.contact .centrar img {
+    width: 250px;
+}
+
+.contact .informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact .informacion div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact .informacion div i, b {
+    color: #b42b2b;
+}
+
+.contact .centrar .tel {
+    background: #1466bd;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+    height: 45px;
+}
+
+.contact .centrar .wts {
+    background: #2ec429;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+}
+
+.contact .centrar .wts i {
+    font-size: 25px;
+}
+
+.contact .centrar .tel i {
+    font-size: 18px;
+}
+
+
+
+.contact .contactar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+form {
+    padding: 20px;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactar h4 {
+    text-align: start;
+    font-size: 25px;
+}
+.datos-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contactar label {
+    display: block;
+    padding-bottom: 10px;
+    color: #b42b2b;
+    font-weight: 700;
+    
+}
+.contactar input,
+.contactar textarea {
+    background: #fff;
+    border: 1px solid transparent;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    resize: none;
+}
+.contactar input:focus,
+.contactar textarea:focus {
+    border: 1px solid #b42b2b;
+}
+.contactar input::placeholder,
+.contactar textarea::placeholder {
+    opacity: 0.5;
+}
+
+#submit{
+    background: #b42b2b;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.map {
+    height: 400px;
+}
+
+.visits {
+    padding: 30px 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    /* font-weight: bold; */
+}
+
+
+.footer {
+    background-color: #222;
+    color: #bbbbbb;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .uni {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+}
+.footer .uni .slg {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.footer .logo-u {
+    width: 100px;
+    height: auto;
+}
+.footer .uni .slg i {
+    align-self: center;
+}
+
+.footer .igua {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    justify-content: start;
+    gap: 10px;
+}
+
+.footer .users {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(7, auto);
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .uni p {
+    padding-left: 10px;
+}
+.footer .users span {
+    padding: 0 10px 0 10px;
+}
+
+.footer .users .email {
+    color: #bbbbbb;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.footer .redes {
+    border-top: 1px solid #5b5b5b;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 25px;
+}
+
+.footer .redes i {
+    font-size: 25px;
+    color: #bbbbbb;
+    transition: all 0.2s ease;
+}
+
+
+.footer .derechos {
+    text-align: center;
+    background-color: #141414;
+    padding: 20px;
+}
+
+@media (hover: hover) {
+    .menu a:hover {
+        background: #fff;
+        color: #b42b2b;
+    }
+    .slider .navigation .nav-btn:hover {
+        opacity: 1;
+    }
+
+    .main .album .tarjeta:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0px 15px 30px -5px rgba(0, 0, 0, 0.3);
+    }
+    .link:hover {
+        transform: scale(1.05);
+        background: #b42b2b;
+        color: white;
+    }
+    .link:hover i {
+        color: white;
+    }
+    .link:active {
+        transform: scale(1);
+    }
+
+    .contact .centrar .tel:hover,
+    .contact .centrar .wts:hover {
+        transform: scale(1.05);
+    }
+    .contact .centrar .tel:active,
+    .contact .centrar .wts:active {
+        transform: scale(1);
+    }
+
+    #submit:hover {
+        transform: scale(1.02);
+    }
+    #submit:active {
+        transform: scale(1);
+    }
+
+    .footer .users .email:hover {
+        color: white;
+    }
+    .footer .redes i:hover {
+        transform: scale(1.2);
+    }
+    
+    .footer .redes .fa-facebook:hover {
+        color: #08225a;
+    }
+    .footer .redes .fa-instagram:hover {
+        color: #cc9add;
+    }
+    .footer .redes .fa-tiktok:hover {
+        color: #cd4661;
+    }
+    .footer .redes .fa-twitter:hover {
+        color: #00ACEE;
+    }
+    .footer .redes .fa-youtube:hover {
+        color: #f1160e;
+    }
+    .footer .redes .fa-whatsap:hover {
+        color: #0e732a;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header .logo {
+        font-size: 40px;
+    }
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+        padding: 0 15px;
+    }
+    .esconder-menu {
+        position: absolute;
+        top: 20px;
+        right: 23px;
+    }
+    .header .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #b42b2b;
+        right: -100%;
+        top: 60px;
+        text-align: center;
+        z-index: 100;
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
+    .header .menu a {
+        border-left: 0;
+        height: auto;
+        padding: 20px;
+    }
+    
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    .slider {
+        height: 280px;
+    }
+
+    .slider .slides {
+        height: 280px;
+    }
+
+    .slider .slides .slide img {
+        height: 280px; 
+    }
+
+    .main {
+        padding: 0;
+        gap: 0;
+    }
+
+
+    .main .album {
+        grid-template-columns: auto;
+        gap: 30px;
+        padding-bottom: 40px;
+    }
+
+    .main .album .tarjeta {
+        width: 320px;
+    }
+
+    .main .album .tarjeta .img-tarjeta {
+        height: 180px;
+    }
+
+    .main .album .tarjeta .info-tarjeta {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .contact {
+        grid-template-columns: auto;
+        padding: 30px;
+        gap: 30px;
+    }
+    .contact .centrar {
+        align-items: center;
+        gap: 20px;
+    }
+    .contact .alinear * {
+        font-size: 12px;
+    }
+
+    .datos-form {
+        grid-template-columns: auto;
+    }
+
+    .visits p,
+    .visits b,
+    .visits span,
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer .uni {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 30px;
+    }
+    .footer .uni .slg {
+        width: 100%;
+        gap: 30px;
+    }
+
+    .footer .logo-u {
+        align-self: center;
+    }
+
+    .footer .uni .users span,
+    .footer .uni .users .email {
+        display: none;
+    }
+
+    .footer .users {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .footer .redes a i {
+        font-size: 20px;
+    }
+}
+.tarjetero {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
